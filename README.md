@@ -49,7 +49,7 @@ Dark IMGUI overlay · QoL & host tools · visuals & ESP · access guard · a ful
 
 If this mod makes your games better, **give it a star** — it helps others find the project and keeps development going!
 
-[![Star on GitHub](https://img.shields.io/github/stars/Kawas-au/OnyxMenu?style=social)](https://github.com/Kawas-set1/OnyxMenu)
+[![Star on GitHub](https://img.shields.io/github/stars/Kawas-set1/OnyxMenu?style=social)](https://github.com/Kawas-set1/OnyxMenu)
 
 </div>
 
