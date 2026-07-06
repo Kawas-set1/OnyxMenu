@@ -19,9 +19,9 @@ Dark IMGUI overlay · QoL & host tools · visuals & ESP · access guard · a ful
 
 <br>
 
-<img src="https://img.shields.io/github/v/release/Kawas-au/OnyxMenu?style=for-the-badge&label=version&color=8A2BE2&logo=github&logoColor=white" alt="Version">
-<img src="https://img.shields.io/github/downloads/Kawas-au/OnyxMenu/total?style=for-the-badge&label=downloads&color=2ea043&logo=github&logoColor=white" alt="Downloads">
-<img src="https://img.shields.io/github/stars/Kawas-au/OnyxMenu?style=for-the-badge&color=gold&logo=github&logoColor=white" alt="Stars">
+<img src="https://img.shields.io/github/v/release/Kawas-set1/OnyxMenu?style=for-the-badge&label=version&color=8A2BE2&logo=github&logoColor=white" alt="Version">
+<img src="https://img.shields.io/github/downloads/Kawas-set1/OnyxMenu/total?style=for-the-badge&label=downloads&color=2ea043&logo=github&logoColor=white" alt="Downloads">
+<img src="https://img.shields.io/github/stars/Kawas-set1/OnyxMenu?style=for-the-badge&color=gold&logo=github&logoColor=white" alt="Stars">
 
 <br><br>
 
@@ -49,7 +49,7 @@ Dark IMGUI overlay · QoL & host tools · visuals & ESP · access guard · a ful
 
 If this mod makes your games better, **give it a star** — it helps others find the project and keeps development going!
 
-[![Star on GitHub](https://img.shields.io/github/stars/Kawas-au/OnyxMenu?style=social)](https://github.com/Kawas-au/OnyxMenu)
+[![Star on GitHub](https://img.shields.io/github/stars/Kawas-au/OnyxMenu?style=social)](https://github.com/Kawas-set1/OnyxMenu)
 
 </div>
 
@@ -71,13 +71,13 @@ If this mod makes your games better, **give it a star** — it helps others find
 
 <div align="center">
 
-<img src="https://img.shields.io/github/v/release/Kawas-au/OnyxMenu?style=for-the-badge&label=latest&color=8A2BE2&logo=github&logoColor=white" alt="Latest release">
-<img src="https://img.shields.io/github/release-date/Kawas-au/OnyxMenu?style=for-the-badge&label=released&color=2ea043" alt="Release date">
-<img src="https://img.shields.io/github/downloads/Kawas-au/OnyxMenu/total?style=for-the-badge&label=downloads&color=success" alt="Downloads">
+<img src="https://img.shields.io/github/v/release/Kawas-set1/OnyxMenu?style=for-the-badge&label=latest&color=8A2BE2&logo=github&logoColor=white" alt="Latest release">
+<img src="https://img.shields.io/github/release-date/Kawas-set1/OnyxMenu?style=for-the-badge&label=released&color=2ea043" alt="Release date">
+<img src="https://img.shields.io/github/downloads/Kawas-set1/OnyxMenu/total?style=for-the-badge&label=downloads&color=success" alt="Downloads">
 
 <br><br>
 
-**[⬇️ Download the latest release](https://github.com/Kawas-au/OnyxMenu/releases/latest)** &nbsp;·&nbsp; **[📜 View all versions](https://github.com/Kawas-au/OnyxMenu/releases)**
+**[⬇️ Download the latest release](https://github.com/Kawas-set1/OnyxMenu/releases/latest)** &nbsp;·&nbsp; **[📜 View all versions](https://github.com/Kawas-set1/OnyxMenu/releases)**
 
 </div>
 
