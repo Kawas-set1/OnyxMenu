@@ -1,0 +1,30 @@
+# build
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+*.dll
+*.pdb
+*.user
+*_v*.dll
+
+# IDE
+.vs/
+.idea/
+.vscode/
+*.suo
+
+# nuget
+packages/
+*.nupkg
+
+# game / BepInEx references (not ours)
+lib/
+GameRefs/
+
+# release artifacts
+artifacts/
+
+# local config & logs
+onyx.mod.cfg
+*.log
