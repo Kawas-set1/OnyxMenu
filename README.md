@@ -152,6 +152,37 @@ If this mod makes your games better, **give it a star** — it helps others find
 ### 🔐 Privacy
 - Block analytics, crash & performance reporting
 
+### 🤖 Dummies (AI bots) <sub>`new`</sub>
+
+Spawn fully autonomous bots that behave like real players:
+
+- 🧭 **Walk the map**, **fake tasks**, and **fix sabotages**
+- 🔪 **Witness kills** → **report the body** → **chat** → **cast votes**
+- 🎭 **Auto-assigned Crewmate** a few seconds after spawn
+- ⚙️ **Formations** · count up to **100** · **color override** · **guard radius**
+
+> [!WARNING]
+> **Dummies are client-side (local to you only).**
+> They live on the host's machine and are meant for you alone. If **another real player joins the lobby**, the dummies **fail to load on their client** and that player gets **kicked / disconnected**.
+> ➡️ Use dummies **solo** or in a lobby with **no other real players**.
+
+> [!IMPORTANT]
+> **Force yourself a role before you start.**
+> When using dummies / **Force Roles**, open **Force Roles → your name → FORCE** before pressing Start.
+> Starting a match **without a forced role = black screen**.
+
+### 🗺️ Radar & Vision
+
+- **Minimap radar** — live player dots in their own colors, movement trails, bodies, **click-to-teleport**
+- **ESP boxes** — see players **through walls** (name + distance)
+- **See players in vents** · **See ghosts** while you're still alive
+- **De-anonymize votes** — see exactly **who voted for whom**, even with anonymous voting on
+
+### 🥚 Fun & Pranks <sub>`host`</sub>
+
+- 🥚 **Turn the whole lobby into eggs** in one click · **morph** everyone into a chosen player
+- 🌈 **Rainbow colors** · **cosmetic cycle** · **size / spin / beat-sync** · **one-tap reset look**
+
 </td></tr>
 </table>
 
