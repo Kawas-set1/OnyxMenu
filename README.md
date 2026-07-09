@@ -104,7 +104,7 @@ If this mod makes your games better, **give it a star** — it helps others find
 ### ⚡ Quality of Life
 - FPS counter & lobby timer (in the ping tracker)
 - Pop-up notifications (toasts)
-- FPS lock / custom cap, HUD scale
+- FPS lock / custom cap · HUD scale
 - One-key **lobby code copy** (`F6`)
 
 ### 🏠 Lobby & Host
@@ -122,6 +122,13 @@ If this mod makes your games better, **give it a star** — it helps others find
 - Full DSP chain: 10-band EQ (28 presets), stereo widening, bass, loudness, de-esser, crossfade, crossfeed, saturation, limiter
 - Real FFT spectrum & disc visualizer
 
+### 🤖 Dummies (AI bots)
+- 🧭 Walk the map · fake tasks · fix sabotages
+- 🔪 Witness kills → report → chat → vote
+- 🎭 Auto-**Crewmate** after spawn
+- ⚙️ Formations · up to **100** · color · guard radius
+> ⚠️ **Local & host-only** — see notes under the table.
+
 </td><td width="50%" valign="top">
 
 ### 👁 Visuals & ESP
@@ -131,13 +138,25 @@ If this mod makes your games better, **give it a star** — it helps others find
 - Skip Shhh / role reveal / kill animations
 - Favorite outfits · hide MOD stamp
 
+### 🗺️ Radar & Vision
+- **Minimap radar** — dots, trails, bodies, click-to-teleport
+- **ESP boxes** through walls (name + distance)
+- See players **in vents** · **ghosts** while alive
+- **De-anonymize votes** — who voted for whom (even anonymous)
+
 ### 🧑 Players
 - Reveal all roles · info above names (level / platform)
 - Show meeting votes · in-match kick / ban (host)
 - **Join detect** — platform, level & raw name on join
 - Body modes: Horse / Seeker / Long / Long Horse
 - Mouse teleport / select · ghost after start
-- Colored name · fun pranks (eggs, morph, rainbow…)
+- Colored name
+
+### 🥚 Fun & Pranks <sub>`host`</sub>
+- 🥚 **Whole lobby into eggs** in one click
+- 🎭 **Morph** everyone into a chosen player
+- 🌈 Rainbow · cosmetic cycle
+- 🔁 Size / spin / beat-sync · reset look
 
 ### 🛡 Guard
 - Ban list / whitelist by FriendCode (kick on join)
@@ -152,39 +171,15 @@ If this mod makes your games better, **give it a star** — it helps others find
 ### 🔐 Privacy
 - Block analytics, crash & performance reporting
 
-### 🤖 Dummies (AI bots) <sub>`new`</sub>
-
-Spawn fully autonomous bots that behave like real players:
-
-- 🧭 **Walk the map**, **fake tasks**, and **fix sabotages**
-- 🔪 **Witness kills** → **report the body** → **chat** → **cast votes**
-- 🎭 **Auto-assigned Crewmate** a few seconds after spawn
-- ⚙️ **Formations** · count up to **100** · **color override** · **guard radius**
+</td></tr>
+</table>
 
 > [!WARNING]
-> **Dummies are client-side (local to you only).**
-> They live on the host's machine and are meant for you alone. If **another real player joins the lobby**, the dummies **fail to load on their client** and that player gets **kicked / disconnected**.
+> **Dummies are client-side (local to you only).** They live on the host's machine and are meant for you alone. If **another real player joins the lobby**, the dummies **fail to load on their client** and that player gets **kicked / disconnected**.
 > ➡️ Use dummies **solo** or in a lobby with **no other real players**.
 
 > [!IMPORTANT]
-> **Force yourself a role before you start.**
-> When using dummies / **Force Roles**, open **Force Roles → your name → FORCE** before pressing Start.
-> Starting a match **without a forced role = black screen**.
-
-### 🗺️ Radar & Vision
-
-- **Minimap radar** — live player dots in their own colors, movement trails, bodies, **click-to-teleport**
-- **ESP boxes** — see players **through walls** (name + distance)
-- **See players in vents** · **See ghosts** while you're still alive
-- **De-anonymize votes** — see exactly **who voted for whom**, even with anonymous voting on
-
-### 🥚 Fun & Pranks <sub>`host`</sub>
-
-- 🥚 **Turn the whole lobby into eggs** in one click · **morph** everyone into a chosen player
-- 🌈 **Rainbow colors** · **cosmetic cycle** · **size / spin / beat-sync** · **one-tap reset look**
-
-</td></tr>
-</table>
+> **Force yourself a role before you start.** When using dummies / **Force Roles**, open **Force Roles → your name → FORCE** before pressing Start. Starting a match **without a forced role = black screen**.
 
 ---
 
