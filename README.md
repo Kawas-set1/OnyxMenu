@@ -242,8 +242,8 @@ Drop `.mp3` / `.wav` / `.ogg` / `.flac` files into `Among Us/BepInEx/plugins/Ony
 
 Onyx is provided **for educational and personal use**. It is a client-side tool — you are responsible for how you use it. Some host / network features may trigger anti-cheat on **official servers**. For the best experience, disable or remove other mods before launching to avoid crashes and conflicts.
 
-> [!CAUTION]
-> **Use at your own risk.** Using this mod can violate the Among Us Terms of Service and may lead to punitive action, including **temporary or permanent bans**. The creator is **not responsible** for any consequences you may face from using it.
+> ⚠️ **Use at your own risk.** Using this mod can violate the Among Us Terms of Service and may lead to punitive action, including **temporary or permanent bans**. The creator is **not responsible** for any consequences you may face from using it.
+
 
 **Intended use.** Onyx is not meant to disrupt Innersloth's services, the availability or integrity of the game, or other players' normal experience. It is best used in **private lobbies** and with friends who consent to a modded session. Do **not** use it to grief public games, bypass protections, or gain an unfair advantage where modding is prohibited. Any misuse is solely the responsibility of the user.
 
