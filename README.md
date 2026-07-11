@@ -36,7 +36,7 @@ Dark IMGUI overlay · QoL & host tools · visuals & ESP · access guard · a ful
 
 **Onyx** is a client-side mod menu built from the ground up for Among Us. Everything lives in a single dark-themed in-game overlay — no external launcher, no clutter. Toggle it with **`Insert`**, tweak what you need, and the settings persist across restarts.
 
-- 🎨 **One clean dark theme** — rounded panels, smooth animations, a sidebar with icons
+- 🎨 **24 accent themes** — one sleek black UI, swap the accent color; rounded panels, smooth animations, icon sidebar
 - 🌍 **Bilingual** — Russian / English, switchable in-game
 - 🔒 **Client-side** — most features affect only your client
 - 🧩 **Modular** — every feature is a toggle; enable only what you want
