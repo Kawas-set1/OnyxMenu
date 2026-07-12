@@ -174,12 +174,12 @@ If this mod makes your games better, **give it a star** — it helps others find
 </td></tr>
 </table>
 
-> [!WARNING]
-> **Dummies are client-side (local to you only).** They live on the host's machine and are meant for you alone. If **another real player joins the lobby**, the dummies **fail to load on their client** and that player gets **kicked / disconnected**.
+> ⚠️ **Warning — dummies are client-side (local to you only).**
+> They live on the host's machine and are meant for you alone. If **another real player joins the lobby**, the dummies **fail to load on their client** and that player gets **kicked / disconnected**.
 > ➡️ Use dummies **solo** or in a lobby with **no other real players**.
 
-> [!IMPORTANT]
-> **Force yourself a role before you start.** When using dummies / **Force Roles**, open **Force Roles → your name → FORCE** before pressing Start. Starting a match **without a forced role = black screen**.
+> ❗ **Important — force yourself a role before you start.**
+> When using dummies / **Force Roles**, open **Force Roles → your name → FORCE** before pressing Start. Starting a match **without a forced role = black screen**.
 
 ---
 
