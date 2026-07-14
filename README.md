@@ -96,18 +96,23 @@ If this mod makes your games better, **give it a star** — it helps others find
 
 ---
 
-## 🧰 Features
+## 🧰 All features
 
-<table>
-<tr><td width="50%" valign="top">
+<details open>
+<summary><b>⚡ Quality of Life</b></summary>
 
-### ⚡ Quality of Life
 - FPS counter & lobby timer (in the ping tracker)
 - Pop-up notifications (toasts)
 - FPS lock / custom cap · HUD scale
 - One-key **lobby code copy** (`F6`)
+- 🎡 **Radial menu** — hold a key for a wheel of favorite toggles
+- ⭐ **Favorites + feature search** — star anything, find it instantly
 
-### 🏠 Lobby & Host
+</details>
+
+<details>
+<summary><b>🏠 Lobby & Host</b></summary>
+
 - Custom **lobby bar** (host avatar, START, FPS/ping/time chips)
 - Unlock Start · start / instant-start on `Enter`
 - **Auto-host** — full state machine (min players, delays, force start, auto-return)
@@ -116,35 +121,37 @@ If this mod makes your games better, **give it a star** — it helps others find
 - Fake map · destroy / rebuild the lobby object
 - Dark lobby theme & panel animations
 - **Lobby clones** — spawn, formations, text-art, shadow / guard / drift
+- 👥 **Networked clones** — copies of you everyone sees, up to 100, formations, text-art *(others see real positions after they rejoin)*
 
-### 🎵 Music Player
-- Opens with **`M`** — plays from `plugins/Onyx/Music/`
-- Full DSP chain: 10-band EQ (28 presets), stereo widening, bass, loudness, de-esser, crossfade, crossfeed, saturation, limiter
-- Real FFT spectrum & disc visualizer
+</details>
 
-### 🤖 Dummies (AI bots)
-- 🧭 Walk the map · fake tasks · fix sabotages
-- 🔪 Witness kills → report → chat → vote
-- 🎭 Auto-**Crewmate** after spawn
-- ⚙️ Formations · up to **100** · color · guard radius
-> ⚠️ **Local & host-only** — see notes under the table.
+<details>
+<summary><b>👁 Visuals & ESP</b></summary>
 
-</td><td width="50%" valign="top">
-
-### 👁 Visuals & ESP
 - Unlock cosmetics · hide cosmetics in match · duplicate colors
 - Free WASD camera · wheel zoom · no-clip
 - Tracers to players / bodies · kill-cooldown ESP
 - Skip Shhh / role reveal / kill animations
 - Favorite outfits · hide MOD stamp
+- 🎭 **Reveal shapeshifter** — true name above the disguise
+- 🧪 **Fake tasks** — fake scan / "cameras in use"
+- 👻 **Invisibility** — vanish on a hotkey
 
-### 🗺️ Radar & Vision
-- **Minimap radar** — dots, trails, bodies, click-to-teleport
+</details>
+
+<details>
+<summary><b>🗺️ Radar & Vision</b></summary>
+
+- **Minimap radar** — dots, trails, bodies · **drag, resize & opacity** · click-to-teleport
 - **ESP boxes** through walls (name + distance)
 - See players **in vents** · **ghosts** while alive
 - **De-anonymize votes** — who voted for whom (even anonymous)
 
-### 🧑 Players
+</details>
+
+<details>
+<summary><b>🧑 Players</b></summary>
+
 - Reveal all roles · info above names (level / platform)
 - Show meeting votes · in-match kick / ban (host)
 - **Join detect** — platform, level & raw name on join
@@ -152,34 +159,76 @@ If this mod makes your games better, **give it a star** — it helps others find
 - Mouse teleport / select · ghost after start
 - Colored name
 
-### 🥚 Fun & Pranks <sub>`host`</sub>
+</details>
+
+<details>
+<summary><b>💬 Chat</b></summary>
+
+- **Chat commands** — `/kick` `/ban` `/mute` `/color` `/role` `/start` `/end` `/meeting` `/close` `/fix`
+- Send / spam messages straight from the menu
+
+</details>
+
+<details>
+<summary><b>🎵 Music Player</b></summary>
+
+- Opens with **`M`** — plays from `plugins/Onyx/Music/`
+- Full DSP chain: 10-band EQ (28 presets), stereo widening, bass, loudness, de-esser, crossfade, crossfeed, saturation, limiter
+- Real FFT spectrum & disc visualizer
+
+</details>
+
+<details>
+<summary><b>🤖 Dummies (AI bots)</b></summary>
+
+- 🧭 Walk the map · fake tasks · fix sabotages
+- 🔪 Witness kills → report → chat → vote
+- 🎭 Auto-**Crewmate** after spawn
+- ⚙️ Formations · up to **100** · color · guard radius
+
+> ⚠️ Local & host-only — see notes below.
+
+</details>
+
+<details>
+<summary><b>🥚 Fun & Pranks</b> <sub><code>host</code></sub></summary>
+
 - 🥚 **Whole lobby into eggs** in one click
 - 🎭 **Morph** everyone into a chosen player
 - 🌈 Rainbow · cosmetic cycle
 - 🔁 Size / spin / beat-sync · reset look
 
-### 🛡 Guard
+</details>
+
+<details>
+<summary><b>🛡 Guard</b></summary>
+
 - Ban list / whitelist by FriendCode (kick on join)
 - Nick ban & name history
 - Min / max **level** guard with kick or ban
-- Block vote-kicks · reserve player colors (host)
+- Block vote-kicks · **targeted vote-kick** (mark players / host preset)
+- **Anti-ban** — drops the vent-kick crash packet off-host
+- Reserve player colors (host)
 
-### 🌐 Network
+</details>
+
+<details>
+<summary><b>🌐 Network &nbsp;·&nbsp; 🔐 Privacy</b></summary>
+
 - Live ping / FPS / lobby status
 - Spoof platform & displayed level
-
-### 🔐 Privacy
 - Block analytics, crash & performance reporting
 
-</td></tr>
-</table>
+</details>
 
-> ⚠️ **Warning — dummies are client-side (local to you only).**
-> They live on the host's machine and are meant for you alone. If **another real player joins the lobby**, the dummies **fail to load on their client** and that player gets **kicked / disconnected**.
+---
+
+> ⚠️ **Dummies are client-side (local to you only).**
+> They live on the host's machine and are meant for you alone. If **another real player joins**, the dummies **fail to load on their client** and that player gets **kicked / disconnected**.
 > ➡️ Use dummies **solo** or in a lobby with **no other real players**.
 
-> ❗ **Important — force yourself a role before you start.**
-> When using dummies / **Force Roles**, open **Force Roles → your name → FORCE** before pressing Start. Starting a match **without a forced role = black screen**.
+> ❗ **Force yourself a role before you start.**
+> When using dummies / **Force Roles**, open **Force Roles → your name → FORCE** before pressing Start. Starting **without a forced role = black screen**.
 
 ---
 
