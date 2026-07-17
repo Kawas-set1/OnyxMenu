@@ -121,7 +121,7 @@ If this mod makes your games better, **give it a star** — it helps others find
 - Fake map · destroy / rebuild the lobby object
 - Dark lobby theme & panel animations
 - **Lobby clones** — spawn, formations, text-art, shadow / guard / drift
-- 👥 **Networked clones** — copies of you everyone sees, up to 100, formations, text-art *(others see real positions after they rejoin)*
+- 👥 Networked clones — copies you (or any player) that everyone sees, up to 2000, formations, text-art (hit Destroy Lobby → spawn → Create Lobby and they show for everyone in the room, no rejoin needed)
 
 </details>
 
