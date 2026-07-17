@@ -309,6 +309,14 @@ Released under the **[GNU GPL v3.0](LICENSE)**. You are free to use, study, shar
 
 ---
 
+## ✨ Inspiration
+
+- [SickoMenu](https://github.com/g0aty/SickoMenu) by [g0aty](https://github.com/g0aty)
+- [MalumMenu](https://github.com/scp222thj/MalumMenu) by [scp222thj](https://github.com/scp222thj)
+- [ElysiumModMenu](https://github.com/Wextikit/ElysiumModMenu) by [Wextikit](https://github.com/Wextikit)
+
+---
+
 <div align="center">
 
 Made with 🖤 by **Kawasaki**
