@@ -101,7 +101,6 @@ internal static class OnyxConfig
     internal static ConfigEntry<bool> VisualNoClip;
     internal static ConfigEntry<bool> HideModStamp;
     internal static ConfigEntry<bool> SkipShhh;
-    internal static ConfigEntry<bool> SkipKillAnim;
     internal static ConfigEntry<bool> ChatCmdXmas;
     internal static ConfigEntry<bool> RevealRoles;
     internal static ConfigEntry<bool> VisualPlayerInfoNames;
@@ -153,7 +152,6 @@ internal static class OnyxConfig
     internal static ConfigEntry<bool> BuffKillAny;
     internal static ConfigEntry<bool> BuffKillAura;
     internal static ConfigEntry<bool> BuffNoKillCd;
-    internal static ConfigEntry<bool> KillCdSelf;
     internal static ConfigEntry<bool> BuffVanishKill;
     internal static ConfigEntry<bool> BuffPhVanish;
     internal static ConfigEntry<bool> BuffVentSab;
@@ -388,7 +386,6 @@ internal static class OnyxConfig
         VisualNoClip = config.Bind("Visual", "NoClip", false, "No-clip: disable the local player collider (lobby and match).");
         HideModStamp = config.Bind("Visual", "HideModStamp", false, "Client-side: hide the yellow MOD badge (stealth).");
         SkipShhh = config.Bind("Visual", "SkipShhh", false, "Skip the 'Shhh!' intro screen.");
-        SkipKillAnim = config.Bind("Visual", "SkipKillAnim", false, "Skip the kill animation overlay.");
         ChatCmdXmas = config.Bind("Chat", "ChatCmdXmas", true, "Host: let players toggle rainbow colors with /xmas in chat.");
         RevealRoles = config.Bind("Visual", "RevealRoles", false, "Show each player's role above their name (by color).");
         VisualPlayerInfoNames = config.Bind("Visual", "PlayerInfoNames", false, "Level/platform/host above names in the lobby.");
@@ -443,7 +440,6 @@ internal static class OnyxConfig
         BuffKillAny = config.Bind("Buffs", "KillAnyone", false, "Target anyone with the kill button, teammates included.");
         BuffKillAura = config.Bind("Buffs", "KillAura", false, "Kill everyone who walks into range.");
         BuffNoKillCd = config.Bind("Buffs", "NoKillCooldown", false, "Zero kill cooldown. Host only.");
-        KillCdSelf = config.Bind("Buffs", "KillCdSelf", false, "Cap your own kill cooldown at 0.1s (off-host; vanilla hosts only).");
         BuffVanishKill = config.Bind("Buffs", "KillWhileVanished", false, "Phantom can kill while invisible. Host only.");
         BuffPhVanish = config.Bind("Buffs", "PhantomEndlessVanish", false, "Phantom: invisibility never runs out.");
         BuffVentSab = config.Bind("Buffs", "SabotageFromVent", false, "Impostor: sabotage button stays usable inside a vent.");
