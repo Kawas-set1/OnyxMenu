@@ -105,6 +105,7 @@ public sealed class OnyxEventNotify : MonoBehaviour
         {
             if (OnyxConfig.NotifyKill == null || !OnyxConfig.NotifyKill.Value || __instance == null || target == null) return;
             if (Mine(__instance.OwnerId)) return;
+            if (target.Data == null || !target.Data.IsDead) return;
             string k = PName(__instance), v = PName(target);
             Fire($"Убийство: {k} → {v}", $"Kill: {k} → {v}", OnyxNotifyKind.Danger);
         }
