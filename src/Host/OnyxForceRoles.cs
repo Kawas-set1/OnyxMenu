@@ -55,6 +55,16 @@ internal static class OnyxForceRoles
         else _forced[pid] = Roles[next].Role;
     }
 
+    internal static void Clear() => _forced.Clear();
+
+    internal static void RegisterDefault(byte pid, RoleTypes role)
+    {
+        if (!_forced.ContainsKey(pid)) _forced[pid] = role;
+    }
+
+    internal static bool ImpTeam(RoleTypes r) =>
+        r == RoleTypes.Impostor || r == RoleTypes.Shapeshifter || r == RoleTypes.Phantom || r == RoleTypes.Viper;
+
     internal static void ForceNow(byte pid)
     {
         if (!Host() || LobbyBehaviour.Instance == null) return;
@@ -64,6 +74,85 @@ internal static class OnyxForceRoles
         EnsureRate(role);
         try { pc.RpcSetRole(role, false); } catch { try { pc.RpcSetRole(role); } catch { } }
         Prime(pc);
+    }
+
+    // раздача на старте: сами делим команды, чтоб форс преда давал настоящего импостера
+    internal static bool Distribute()
+    {
+        if (_forced.Count == 0 || !Host()) return true;
+
+        GameOptionsManager gom = GameOptionsManager.Instance;
+        if (gom == null || gom.CurrentGameOptions == null) return true;
+        GameManager gm = GameManager.Instance;
+        if (gm == null || gm.LogicRoleSelection == null) return true;
+        IGameOptions opt = gom.CurrentGameOptions;
+        LogicRoleSelection logic = gm.LogicRoleSelection;
+
+        var players = new List<PlayerControl>();
+        try
+        {
+            foreach (PlayerControl p in PlayerControl.AllPlayerControls)
+                if (p != null && p.Data != null && !p.Data.Disconnected && !p.Data.IsDead && p.PlayerId < 100)
+                    players.Add(p);
+        }
+        catch { return true; }
+        if (players.Count == 0) return true;
+
+        var imps = new List<PlayerControl>();
+        foreach (PlayerControl p in players)
+            if (_forced.TryGetValue(p.PlayerId, out RoleTypes r) && ImpTeam(r)) imps.Add(p);
+
+        int num;
+        try { num = opt.GetInt(Int32OptionNames.NumImpostors); } catch { num = 1; }
+        if (imps.Count > 0) num = imps.Count;
+        else if (num >= players.Count) num = players.Count - 1;
+        if (num < 1) num = 1;
+
+        var rng = new System.Random();
+        while (imps.Count < num)
+        {
+            var pool = new List<PlayerControl>();
+            foreach (PlayerControl p in players) if (!imps.Contains(p)) pool.Add(p);
+            if (pool.Count == 0) break;
+            imps.Add(pool[rng.Next(pool.Count)]);
+        }
+
+        var impInfo = new Il2CppSystem.Collections.Generic.List<NetworkedPlayerInfo>();
+        var crewInfo = new Il2CppSystem.Collections.Generic.List<NetworkedPlayerInfo>();
+        foreach (PlayerControl p in players)
+        {
+            if (imps.Contains(p)) impInfo.Add(p.Data);
+            else crewInfo.Add(p.Data);
+        }
+
+        try
+        {
+            logic.AssignRolesForTeam(impInfo, opt, (RoleTeamTypes)1, int.MaxValue, new Il2CppSystem.Nullable<RoleTypes>());
+            logic.AssignRolesForTeam(crewInfo, opt, (RoleTeamTypes)0, int.MaxValue, new Il2CppSystem.Nullable<RoleTypes>(RoleTypes.Crewmate));
+        }
+        catch { return true; }
+
+        foreach (PlayerControl p in players)
+        {
+            if (!_forced.TryGetValue(p.PlayerId, out RoleTypes role)) continue;
+            if (role == RoleTypes.Crewmate || role == RoleTypes.Impostor || (int)role == 255) continue;
+            try { RoleManager.Instance.SetRole(p, role); } catch { }
+            try { p.RpcSetRole(role, false); } catch { }
+        }
+
+        foreach (PlayerControl p in players) Refresh(p);
+        return false;
+    }
+
+    private static void Refresh(PlayerControl p)
+    {
+        try
+        {
+            if (p == null || p.Data == null) return;
+            if (p.Data.Role != null) p.Data.Role.Initialize(p);
+            if (ImpTeam(p.Data.RoleType)) p.SetKillTimer(0f);
+        }
+        catch { }
     }
 
     private static void EnsureRate(RoleTypes role)
@@ -92,35 +181,16 @@ internal static class OnyxForceRoles
         try { foreach (PlayerControl p in PlayerControl.AllPlayerControls) if (p != null && p.PlayerId == pid) return p; } catch { }
         return null;
     }
-
-    internal static void Clear() => _forced.Clear();
-
-    internal static void RegisterDefault(byte pid, RoleTypes role)
-    {
-        if (!_forced.ContainsKey(pid)) _forced[pid] = role;
-    }
-
-    internal static void ReapplyAtStart()
-    {
-        if (_forced.Count == 0 || !Host()) return;
-        try
-        {
-            foreach (PlayerControl pc in PlayerControl.AllPlayerControls)
-            {
-                if (pc == null || pc.Data == null) continue;
-                if (!_forced.TryGetValue(pc.PlayerId, out RoleTypes role)) continue;
-                try { pc.RpcSetRole(role, false); } catch { try { pc.RpcSetRole(role); } catch { } }
-                Prime(pc);
-            }
-        }
-        catch { }
-    }
 }
 
-[HarmonyPatch(typeof(IntroCutscene), "CoBegin")]
-internal static class OnyxForceRolesStartPatch
+[HarmonyPatch(typeof(RoleManager), "SelectRoles")]
+internal static class OnyxForceRolesSelectPatch
 {
-    public static void Prefix() => OnyxForceRoles.ReapplyAtStart();
+    public static bool Prefix()
+    {
+        try { return OnyxForceRoles.Distribute(); }
+        catch { return true; }
+    }
 }
 
 [HarmonyPatch(typeof(LobbyBehaviour), "Start")]
