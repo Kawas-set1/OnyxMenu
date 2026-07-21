@@ -91,6 +91,7 @@ If this mod makes your games better, **give it a star** — it helps others find
 <img src="docs/preview1.png" alt="Onyx preview" width="100%">
 <img src="docs/preview2.png" alt="Onyx preview" width="100%">
 <img src="docs/preview3.png" alt="Onyx preview" width="100%">
+<img src="docs/preview4.png" alt="Onyx preview" width="100%">
 
 </div>
 
