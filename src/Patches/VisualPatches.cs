@@ -490,10 +490,14 @@ internal static class VisualAssist
     {
         try
         {
-            if (player.Data == null || player.Data.Role == null) return string.Empty;
-            int roleId = (int)player.Data.Role.Role;
-            string name = RoleDisplayName(roleId, player.Data.Role.Role.ToString());
-            Color col = RoleColor(roleId, player.Data.Role.TeamColor);
+            if (player.Data == null) return string.Empty;
+            int roleId;
+            string fallbackName;
+            Color fallbackCol;
+            if (player.Data.Role != null) { roleId = (int)player.Data.Role.Role; fallbackName = player.Data.Role.Role.ToString(); fallbackCol = player.Data.Role.TeamColor; }
+            else { roleId = (int)player.Data.RoleType; fallbackName = player.Data.RoleType.ToString(); fallbackCol = Color.gray; }
+            string name = RoleDisplayName(roleId, fallbackName);
+            Color col = RoleColor(roleId, fallbackCol);
             string hex = ColorUtility.ToHtmlStringRGB(col);
             return "<size=58%><b><color=#" + hex + ">" + name + "</color></b></size>";
         }
@@ -507,10 +511,14 @@ internal static class VisualAssist
     {
         try
         {
-            if (info == null || info.Role == null) return string.Empty;
-            int roleId = (int)info.Role.Role;
-            string name = RoleDisplayName(roleId, info.Role.Role.ToString());
-            Color col = RoleColor(roleId, info.Role.TeamColor);
+            if (info == null) return string.Empty;
+            int roleId;
+            string fallbackName;
+            Color fallbackCol;
+            if (info.Role != null) { roleId = (int)info.Role.Role; fallbackName = info.Role.Role.ToString(); fallbackCol = info.Role.TeamColor; }
+            else { roleId = (int)info.RoleType; fallbackName = info.RoleType.ToString(); fallbackCol = Color.gray; }
+            string name = RoleDisplayName(roleId, fallbackName);
+            Color col = RoleColor(roleId, fallbackCol);
             string hex = ColorUtility.ToHtmlStringRGB(col);
             return "<size=58%><b><color=#" + hex + ">" + name + "</color></b></size>";
         }
