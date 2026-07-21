@@ -73,7 +73,6 @@ internal static class OnyxQuick
         new QuickItem("anonvotes", "Раскрыть анонимные", "De-anon votes", OnyxConfig.RevealAnonVotes),
         new QuickItem("infonames", "Инфо над игроками", "Info over players", OnyxConfig.VisualPlayerInfoNames),
         new QuickItem("skipshhh", "Скип Shhh", "Skip Shhh", OnyxConfig.SkipShhh),
-        new QuickItem("skipkill", "Скип килл-анимации", "Skip kill anim", OnyxConfig.SkipKillAnim),
         new QuickItem("ghoststart", "Призрак после старта", "Ghost after start", OnyxConfig.GhostAfterStart),
         new QuickItem("mouseteleport", "Телепорт по ПКМ", "Teleport on RMB", OnyxConfig.MouseTeleport),
         new QuickItem("mouseselect", "Выбор мышью", "Mouse select", OnyxConfig.MouseSelect),
