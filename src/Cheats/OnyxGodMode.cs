@@ -14,10 +14,12 @@ public sealed class OnyxGodMode : MonoBehaviour
     {
         bool on = On;
         if (on == _last) return;
-        _last = on;
 
         PlayerControl me = PlayerControl.LocalPlayer;
-        if (me == null || me.inVent) return;
+        if (me == null) return;
+        if (on && me.inVent) return;
+
+        _last = on;
         Send(on ? 2 : 3);
     }
 
