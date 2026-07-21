@@ -181,8 +181,7 @@ internal static class BuffKillCdPatch
     public static void Prefix(PlayerControl __instance, ref float __0)
     {
         if (__instance != PlayerControl.LocalPlayer) return;
-        if (OnyxConfig.BuffNoKillCd.Value && OnyxRoleBuffs.Host()) { __0 = 0f; return; }
-        if (OnyxConfig.KillCdSelf != null && OnyxConfig.KillCdSelf.Value && __0 > 0.1f) __0 = 0.1f;
+        if (OnyxConfig.BuffNoKillCd.Value && OnyxRoleBuffs.Host()) __0 = 0f;
     }
 }
 
