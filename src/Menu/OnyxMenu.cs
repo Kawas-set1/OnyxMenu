@@ -1752,7 +1752,6 @@ public sealed class OnyxMenu : MonoBehaviour
         Toggle(b.x, ref by, b.width, OnyxText.T("Убивать кого угодно", "Kill anyone"), OnyxConfig.BuffKillAny);
         Toggle(b.x, ref by, b.width, OnyxText.T("Аура убийства", "Kill aura"), OnyxConfig.BuffKillAura);
         Toggle(b.x, ref by, b.width, OnyxText.T("Кулдаун убийства 0 (хост)", "Kill cooldown 0 (host)"), OnyxConfig.BuffNoKillCd);
-        Toggle(b.x, ref by, b.width, OnyxText.T("Кулдаун килла 0.1 (вне хоста)", "Kill cooldown 0.1 (off-host)"), OnyxConfig.KillCdSelf);
         Toggle(b.x, ref by, b.width, OnyxText.T("Венты любой ролью", "Vents with any role"), OnyxConfig.BuffVentAny);
         Toggle(b.x, ref by, b.width, OnyxText.T("Таски предом", "Tasks as impostor"), OnyxConfig.BuffImpTasks);
         Toggle(b.x, ref by, b.width, OnyxText.T("Авто-репорт своих киллов", "Auto-report own kills"), OnyxConfig.BuffAutoReport);
@@ -2081,10 +2080,9 @@ public sealed class OnyxMenu : MonoBehaviour
         by = b.y;
         Toggle(b.x, ref by, b.width, OnyxText.T("Скрыть MOD-штамп", "Hide MOD stamp"), OnyxConfig.HideModStamp);
 
-        b = Card(x, ref y, w, OnyxText.T("Пропуск анимаций", "Skip animations"), 2f * RowH);
+        b = Card(x, ref y, w, OnyxText.T("Пропуск анимаций", "Skip animations"), RowH);
         by = b.y;
         Toggle(b.x, ref by, b.width, OnyxText.T("Интро «Shhh»", "'Shhh' intro"), OnyxConfig.SkipShhh);
-        Toggle(b.x, ref by, b.width, OnyxText.T("Анимация килла", "Kill animation"), OnyxConfig.SkipKillAnim);
 
         b = Card(x, ref y, w, OnyxText.T("Избранные образы", "Favorite outfits"), 4f * 30f + 30f);
         by = b.y;
